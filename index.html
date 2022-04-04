@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.table{
+			background-image: url(стол.jpg);
+			background-size: cover;
+			height: 790px;
+		}
+		.attempts{
+			background-color: white;
+			text-align: center;
+		}
+		.task{
+			background-color: white;
+			text-align: center;
+		}
+		.FC{
+			size: 100%;
+			width: 186px;
+			left: 100px;
+			top: 200px;
+			position: absolute;
+			transition: 1s;
+		}
+		.AC{
+			size: 100%;
+			width: 186px;
+			left: 100px;
+			top: 500px;
+			position: absolute;
+			transition: 1s;
+		}
+		.JD{
+			size: 100%;
+			width: 186px;
+			left: 464px;
+			top: 500px;
+			position: absolute;
+			transition: 1s;
+		}
+		.QS{
+			size: 100%;
+			width: 186px;
+			left: 828px;
+			top: 500px;
+			position: absolute;
+			transition: 1s;
+		}
+		.KH{
+			size: 100%;
+			width: 186px;
+			left: 1192px;
+			top: 500px;
+			position: absolute;
+			transition: 1s;
+		}
+		.TH{
+			size: 100%;
+			width: 186px;
+			left: 464px;
+			top: 200px;
+			position: absolute;
+			transition: 1s;
+		}
+		.AS{
+			size: 100%;
+			width: 186px;
+			left: 828px;
+			top: 200px;
+			position: absolute;
+			transition: 1s;
+		}
+		.SD{
+			size: 100%;
+			width: 186px;
+			left: 1192px;
+			top: 200px;
+			position: absolute;
+			transition: 1s;
+		}
+		.btn{
+			left:  50%;
+			position: relative;
+			transform: translate(-50%, 0);
+		}
+	</style>
+</head>
+<body>
+	<div class="table">
+		<div class="name">
+			<div class="attempts">
+				<h2>Очки: <span class="num"></span></h2>
+			</div>
+			<div class="task">
+				<h1>Найди 5 треф</h1>
+			</div>
+			<div >
+				<button class="btn">Перемешать</button>
+			</div>
+			<div class="">
+				<div>
+					<div class="">
+						<img src="5C.png" class="FC card clubs">
+					</div>
+					<div class="">
+						<img src="JD.jpg" class="JD card diamonds">
+					</div>
+					<div class="">
+						<img src="QS.jpg" class="QS card spades">
+					</div>
+					<div class="">
+						<img src="AS.jpg" class="AS card spades">
+					</div>
+					<div class="">
+						<img src="AC.png" class="AC card clubs">
+					</div>
+					<div class="">
+						<img src="7D.png" class="SD card diamonds">
+					</div>
+					<div class="">
+						<img src="KH.png" class="KH card hearts">
+					</div>
+					<div class="">
+						<img src="10H.png" class="TH card hearts">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		let btn = document.querySelector(".btn");
+		let card = document.querySelectorAll(".card");
+		let num = 0;
+		let numtxt = document.querySelector(".num");
+		numtxt.innerHTML = num;
+		let hearts = 0;
+		let spades = 0;
+		let clubs = 0;
+		let diamonds = 0;
+		btn.onclick = function(){
+			card[0].src = "card_back.jpg";
+			card[1].src = "card_back.jpg";
+			card[2].src = "card_back.jpg";
+			card[3].src = "card_back.jpg";
+			card[4].src = "card_back.jpg";
+			card[5].src = "card_back.jpg";
+			card[6].src = "card_back.jpg";
+			card[7].src = "card_back.jpg";
+			card[0].style.left = "464px";
+			card[0].style.top = "500px";
+			card[1].style.left = "828px";
+			card[1].style.top = "500px";
+			card[2].style.left = "464px";
+			card[2].style.top = "200px";
+			card[3].style.left = "100px";
+			card[3].style.top = "200px";
+			card[4].style.left = "1192px";
+			card[4].style.top = "500px";
+			card[5].style.left = "828px";
+			card[5].style.top = "200px";
+			card[6].style.left = "100px";
+			card[6].style.top = "500px";
+			card[7].style.left = "1192px";
+			card[7].style.top = "200px";
+
+		}
+
+		card[0].onclick = function(){
+			document.querySelector(".FC").src = "5C.png";
+			alert('правильно');
+		}
+		card[1].onclick = function(){
+			document.querySelector(".JD").src = "JD.jpg";
+			alert('не правильно');
+		}
+		card[2].onclick = function(){
+			document.querySelector(".QS").src = "QS.jpg";
+			alert('не правильно');
+		}
+		card[3].onclick = function(){
+			document.querySelector(".AS").src = "AS.jpg";
+			alert('не правильно');
+		}
+		card[4].onclick = function(){
+			document.querySelector(".AC").src = "AC.png";
+			alert('не правильно');
+		}
+		card[5].onclick = function(){
+			document.querySelector(".SD").src = "7D.png";
+			alert('не правильно');
+		}
+		card[6].onclick = function(){
+			document.querySelector(".KH").src = "KH.png";
+			alert('не правильно');
+		}
+		card[7].onclick = function(){
+			document.querySelector(".TH").src = "10H.png";
+			alert('не правильно');
+		}
+	
+	</script>
+</body>
+</html>
